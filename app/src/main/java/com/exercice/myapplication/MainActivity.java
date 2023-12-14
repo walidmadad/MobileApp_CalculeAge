@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v2) {
                 String dateNaiss = dateNaissance.getText().toString();
                 try {
-                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
                     LocalDate dateNaissance = LocalDate.parse(dateNaiss, formatter);
 
                     Period la_date = Period.between(dateNaissance, LocalDate.now());
